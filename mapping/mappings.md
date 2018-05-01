@@ -13,7 +13,7 @@ String 6 Current            DC Current 6            Decimal     A
 String 7 Current            DC Current 7            Decimal     A
 String 8 Current            DC Current 8            Decimal     A
 Temperature                 DC Temperature          Decimal     °C
-AC Phase 1 Volts            DC Voltage              Decimal     V
+DC Voltage                  DC Voltage              Decimal     V
 Status                      Status                  keyword
 
 
