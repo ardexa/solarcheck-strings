@@ -1,13 +1,26 @@
 # Purpose
 Phoenix Contact supply solar string monitors. The purpose of this project is to collect data from Phoenix Contact SOLARCHECK string monitors and send the data to your cloud using Ardexa. Data from solarcheck string monitors is read using an Ethernet connection using Modbus RTU (over Ethernet) and a Linux device such as a Raspberry Pi, or an X86 intel powered computer. 
 
-# How does it work
+## How does it work
 This application is written in Python. This application will query 1 or more connected inverters at regular intervals. Data will be written to log files on disk in a directory specified by the user. Usage and command line parameters are shown below.
 
 ## Install
 On a raspberry Pi, or other Linux machines (arm, intel, mips or whetever), make sure Python is installed (which it should be). Then install the package as follows:
 ```
 sudo pip install solarcheck_ardexa
+```
+
+You also need to install the `modpoll` tool
+```
+cd
+mkdir modpoll
+cd modpoll
+wget http://www.modbusdriver.com/downloads/modpoll.3.4.zip
+unzip modpoll.3.4.zip 
+cd linux/
+chmod 755 modpoll 
+sudo cp modpoll /usr/local/bin
+modpoll -h
 ```
 
 ## Usage
